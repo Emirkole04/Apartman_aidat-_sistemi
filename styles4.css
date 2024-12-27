@@ -1,0 +1,94 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;  /* Başlıkları ortalar */
+}
+
+/* Kullanıcı paneli için stil ayarları */
+.container {
+    width: 80%;
+    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçeriği yatayda ortalar */
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Ana içerik kenarlarını yuvarlatır */
+    width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Tablonun taşmasını önlemek için yatay kaydırma ekler */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Çıkış yap butonu */
+.logout-btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    display: block; /* Butonu blok element yapar */
+    margin: 20px auto; /* Butonu yatayda ortalar */
+    width: fit-content; /* Butonu içeriğine göre genişletir */
+    text-align: center; /* Metni ortalar */
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}

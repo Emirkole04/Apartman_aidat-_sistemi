@@ -1,0 +1,61 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* İçeriği yatayda ortalar */
+    justify-content: center; /* İçeriği dikeyde ortalar */
+}
+
+h1 {
+    color: #333;
+    text-align: center;  /* Başlığı ortalar */
+    margin-bottom: 20px; /* Başlık altına boşluk ekler */
+}
+
+/* Form için stil ayarları */
+form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px; /* Form kenarlarını yuvarlatır */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Form içeriğini ortalar */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left; /* Label'ları sola hizalar */
+    width: 100%; /* Label'ların tam genişlikte olmasını sağlar */
+}
+
+form input {
+    width: 80%; /* Genişliği kısaltır */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%; /* Butonu genişletir */
+}
+
+form button:hover {
+    background: #555;
+}

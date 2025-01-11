@@ -24,10 +24,21 @@ $aidatlar = $aidatlar->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanıcı Paneli 2</title>
     <link rel="stylesheet" href="styles4.css">
+    <style>
+        .status-paid {
+            color: green;
+            font-size: 20px;
+        }
+
+        .status-unpaid {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
-        <h1>Kullanıcı Paneli </h1>
+        <h1>Kullanıcı Paneli</h1>
     </div>
     <div class="container">
         <div class="main">
@@ -44,8 +55,16 @@ $aidatlar = $aidatlar->fetchAll(PDO::FETCH_ASSOC);
                     <tr>
                         <td><?php echo htmlspecialchars($aidat['id']); ?></td>
                         <td><?php echo htmlspecialchars($aidat['amount']); ?></td>
-                        <td><?php echo htmlspecialchars($aidat['due_date']); ?></td>
-                        <td><?php echo htmlspecialchars($aidat['status']); ?></td>
+                        <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($aidat['due_date']))); ?></td>
+                        <td>
+                            <?php 
+                            if ($aidat['status'] === 'ödendi') {
+                                echo '<span class="status-paid">&#x2714;</span>'; // Yeşil tik
+                            } else {
+                                echo '<span class="status-unpaid">&#x2716;</span>'; // Kırmızı çarpı
+                            }
+                            ?>
+                        </td>
                     </tr>
                     <?php endforeach; ?>
                 </table>

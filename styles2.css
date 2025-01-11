@@ -144,3 +144,14 @@ th {
 .btn-small-logout:hover {
     background: #c0392b;
 }
+
+/* Durum simgeleri */
+.status-paid {
+    color: green;
+    font-size: 20px;
+}
+
+.status-unpaid {
+    color: red;
+    font-size: 20px;
+}
